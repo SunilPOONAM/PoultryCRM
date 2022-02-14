@@ -1,0 +1,72 @@
+﻿@using System.Data;
+@using PoultryCRM.Models;
+@model PoultryCRM.Models.Chiken_Breed_master
+@{
+    ViewBag.Title = "Chiken_Breed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chiken_Breed</h2>
+@using (Html.BeginForm("Chiken_Breed", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+     <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <label>Chiken Breed</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Chiken_Breed, new { @placeholder = "Flock ", @class = "form-control ", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+   
+    <div class="col-md-3">
+        <label></label>
+        <div class="input-group pd">
+            <input type="submit" class="form-control btn bg-in waves-effect" value=" submit">
+        </div>
+    </div>
+}
+<div id="datatable">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                    <thead style="background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;">
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Sr No.</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Chiken Breed</th></tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            DBManager db = new DBManager();
+                            DataTable dttt = db.GetChiken_Breed();
+
+                            if (dttt.Rows.Count > 0)
+                            {
+                                int j = 0;
+                                for (int i = 0; dttt.Rows.Count > i; i++)
+                                {
+                                    j++;
+                                    <tr><td>@j</td><td>@dttt.Rows[i]["Chiken_Breed"]</td></tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    })
+
+</script>

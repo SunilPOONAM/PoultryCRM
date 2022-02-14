@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "vaccine_report";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<h2>Vaccine Report</h2>
+
+
+@using System.Data;
+@using PoultryCRM.Models;
+<a href="/manage/Exportclick?table=Vaccination_tbl" class="btn btn-warning">Click To Export Excel</a>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                       
+                    </div>
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No</th>
+                                        <th>Flock Name</th>
+                                        <th>Vaccine</th>
+                                        <th>No. of Chiks</th>
+                                        <th>Vaccination Date</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @{
+                                        DBManager db = new DBManager();
+                                        DataTable dttt = db.GetVaccination();
+
+                                        if (dttt.Rows.Count > 0)
+                                        {
+                                            int j = 0;
+                                            for (int i = 0; dttt.Rows.Count > i; i++)
+                                            {
+                                                j++;
+                                                <tr><td>@j</td><td>@dttt.Rows[i]["Flock"]</td><td>@dttt.Rows[i]["Vaccine"]</td><td>@dttt.Rows[i]["Chiks"]</td><td>@dttt.Rows[i]["Vaccination_Date"]</td></tr>
+                                            }
+                                        }
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script src="~/Resources/plugins/jquery/jquery.min.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/jquery.dataTables.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+<script src="~/Resources/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+<script src="~/Resources/js/pages/tables/jquery-datatable.js"></script>

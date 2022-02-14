@@ -1,0 +1,180 @@
+﻿@using System.Data;
+@using PoultryCRM.Models;
+@model PoultryCRM.Models.Egg_Collection_tbl
+      @{ 
+           ViewBag.Title = "EggCollection";
+           Layout = "~/Views/Shared/_LayoutUser.cshtml";
+       }
+<h2>Egg Collection</h2>
+<script src="~/Resources/js/script.js"></script>
+
+@using (Html.BeginForm("EggCollection", "Flock_Management", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    <div class="col-md-4">
+        <label>Flock</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+             @Html.DropDownListFor(model => model.Flock, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+
+
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Collection Date</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Collection_Date, new { @placeholder = "Collection Date ", @class = "form-control ", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Collected Eggs</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+              @Html.TextBoxFor(model => model.Collected_Eggs, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true", onkeypress = "return cn(event)" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Good Eggs</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Good_Eggs, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true", onkeypress = "return cn(event)" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Spoilt Eggs</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Spoilt_Eggs, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true", onkeypress = "return cn(event)" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Comments</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Comment, new { @placeholder = "Comments....... ", @class = "form-control", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <label></label>
+        <div class="input-group">
+            <input type="submit" class="form-control btn bg-in waves-effect " value=" submit">
+        </div>
+    </div>
+   
+}
+@*<div id="datatable" style="margin-top:20%;">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                    <thead style="background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;">
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Sr No.</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Flock Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width:233px;">Collection Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width:233px;">Collected Eggs</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 104px;">Good Eggs</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width:233px;">Spoilt Eggs</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 48px;">Comment</th></tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            DBManager db = new DBManager();
+                            DataTable dttt = db.GetEgg_Collection();
+
+                            if (dttt.Rows.Count > 0)
+                            {
+                                int j = 0;
+                                for (int i = 0; dttt.Rows.Count > i; i++)
+                                {
+                                    j++;
+                                    <tr><td>@j</td><td>@dttt.Rows[i]["Flock"]</td><td>@dttt.Rows[i]["Collection_Date"]</td><td>@dttt.Rows[i]["Collected_Eggs"]</td><td>@dttt.Rows[i]["Spoilt_Eggs"]</td><td>@dttt.Rows[i]["Good_Eggs"]</td><td>@dttt.Rows[i]["Comment"]</td></tr>
+                                }
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>*@
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+     //   alert($("#lblUser").val());
+        var d = new Date();
+        var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+        var n = $("#Collection_Date").val(strDate);
+
+    })
+    function cn(evt) {
+        //alert("ok");
+        evt = (evt) ? evt : window.event;
+        var charcode = (evt.which) ? evt.which : evt.keycode;
+        if (charcode != 46 && charcode > 31 && (charcode < 48 || charcode > 57))
+
+            return false;
+        return true;
+    }
+    var Flockname = $("#FarmName").val();
+   // alert(Flockname);
+    $.ajax({
+        url: "/Flock_Management/GetFlockName",
+        method: "get",
+        data: { "Flockname": Flockname },
+        success: function (result) {
+            var n = result.length
+            $.each(result, function (i) {
+                //var dd=result.text;
+                //alert(dd);
+                //  $("#Vaccine").append("<option value='" + result[row].value + "'>" + result[row].text + "</option>");
+                $("#Flock").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+            });
+            //for (i = 0; i < n;i++) {
+            //    alert(result[i]['text'])
+
+            // }
+        }
+    })
+
+
+</script>
+
+
+
+
+
+
+
+
+

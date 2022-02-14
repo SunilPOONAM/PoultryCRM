@@ -1,0 +1,48 @@
+﻿@model PoultryCRM.Models.Medication_Master
+
+@{
+    ViewBag.Title = "Medication";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Medication</h2>
+
+@using (Html.BeginForm("Medication", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    
+
+
+
+    <div class="col-md-6">
+        <label>Medicine</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+@Html.TextBoxFor(model => model.Medication, new { @placeholder = " ", @class = "form-control ", @autocomplete = "off", Required = "true" })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label></label>
+        <div class="input-group pd">
+            <input type="submit" class="form-control btn bg-in waves-effect" value=" submit">
+        </div>
+    </div>
+}
+
+
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    })
+
+</script>
+

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Poultry_CRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Birds_Master">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Birds_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Birds_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Chiken_Breed_master">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Chiken_Breed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Daily_Feeding_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Flock" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="feeding_date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Type_Of_Bird" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Feed_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity_Fed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Egg_Collection_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Flock" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Collection_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Collected_Eggs" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Good_Eggs" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Spoilt_Eggs" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Farm_Master">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Farm_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Owner_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contact_person" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Addrees" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FeedType_Master">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Feed_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Feed_Type_Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Flock_Management_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Acquired_On" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Flock_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Flock_Breed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Flock_Source" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Chiken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Chicks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hens" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cocks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Issue_Items_master">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Farm_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Quentity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Issue_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Farm_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Login_Reg_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Medication_Master">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Medication" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Medication_value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medication_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Flock" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Medication_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Medication" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Chiks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Vaccination_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Flock" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Vaccination_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Vaccine" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Chiks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Vaccine_Master">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vaccine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Poultry_CRMEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Birds_Master" EntityType="Self.Birds_Master" />
+    <EntitySet Name="Chiken_Breed_master" EntityType="Self.Chiken_Breed_master" />
+    <EntitySet Name="Daily_Feeding_tbl" EntityType="Self.Daily_Feeding_tbl" />
+    <EntitySet Name="Egg_Collection_tbl" EntityType="Self.Egg_Collection_tbl" />
+    <EntitySet Name="Farm_Master" EntityType="Self.Farm_Master" />
+    <EntitySet Name="FeedType_Master" EntityType="Self.FeedType_Master" />
+    <EntitySet Name="Flock_Management_tbl" EntityType="Self.Flock_Management_tbl" />
+    <EntitySet Name="Issue_Items_master" EntityType="Self.Issue_Items_master" />
+    <EntitySet Name="Login_Reg_tbl" EntityType="Self.Login_Reg_tbl" />
+    <EntitySet Name="Medication_Master" EntityType="Self.Medication_Master" />
+    <EntitySet Name="Medication_tbl" EntityType="Self.Medication_tbl" />
+    <EntitySet Name="Vaccination_tbl" EntityType="Self.Vaccination_tbl" />
+    <EntitySet Name="Vaccine_Master" EntityType="Self.Vaccine_Master" />
+  </EntityContainer>
+</Schema>

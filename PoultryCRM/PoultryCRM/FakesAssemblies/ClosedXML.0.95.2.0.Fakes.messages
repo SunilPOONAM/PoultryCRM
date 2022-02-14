@@ -1,0 +1,1 @@
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\Fakes\ClosedXML.fakes : error : assembly D:\Poonam Yadav\PoultryCRM\packages\ClosedXML.0.95.2\lib\netstandard2.0\ClosedXML.dll failed to load properly The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)

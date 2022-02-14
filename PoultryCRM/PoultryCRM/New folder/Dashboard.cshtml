@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="block-header">
+        <h2>DASHBOARD</h2>
+    </div>
+
+    <!-- Widgets -->
+    <div class="row clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+
+            <a href="/Flock_Management/Feeding">
+                <div class="info-box bg-pink hover-expand-effect">
+                    <div class="icon">
+                        <span class="blks"><img src="~/Resources/images/feeding.png" /></span>
+                    </div>
+                    <div class="content">
+                        <div class="text"> Daily Feeding</div>
+                        @*<div class="number count-to" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20"></div>*@
+                    </div>
+                </div>
+
+            </a>
+
+        </div>
+        <a href="/Flock_Management/EggCollection">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-cyan hover-expand-effect">
+                    <div class="icon">
+                        <span class="blks"><img src="~/Resources/images/eggs.png" /></span>
+                    </div>
+                    <div class="content">
+                        <div class="text">EggCollection</div>
+                        @*<div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"></div>*@
+                    </div>
+                </div>
+            </div>
+        </a>
+        @*<a href="/Flock_Management/Flock_Management">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-light-green hover-expand-effect">
+                    <div class="icon">
+                        <span class="blks"><img src="~/Resources/images/chicks.png" /></span>
+                    </div>
+                    <div class="content">
+                        <div class="text">Flock_Management</div>
+                      
+                    </div>
+                </div>
+            </div>
+        </a>*@
+        <a href="/Flock_Management/Medicin">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-orange hover-expand-effect">
+                    <div class="icon">
+                        <span class="blks"><img src="~/Resources/images/stethoscope.png" /></span>
+                    </div>
+                    <div class="content">
+                        <div class="text">Medication</div>
+                        @*<div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20"></div>*@
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/Flock_Management/Vaccination">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-light-green hover-expand-effect">
+                    <div class="icon">
+                        <span class="blks"><img src="~/Resources/images/vaccine.png" /></span>
+                    </div>
+                    <div class="content">
+                        <div class="text">Vaccination</div>
+                        @*<div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20"></div>*@
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- #END# Widgets -->
+    <!-- #END# CPU Usage -->
+
+
+
+</div>
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>

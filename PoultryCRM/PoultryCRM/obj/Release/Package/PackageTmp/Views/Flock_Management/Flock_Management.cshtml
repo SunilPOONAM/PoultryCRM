@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewBag.Title = "Flock_Management";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Flock_Management</h2>
+@model PoultryCRM.Models.Flock_Management_tbl
+     
+
+<script src="~/Resources/js/script.js"></script>
+
+@using (Html.BeginForm("Flock_Management", "Flock_Management", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+
+    <div class="col-md-4">
+        <label>Date:</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Acquired_On, new { @placeholder = "Feeding Date ", @class = "form-control ", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Flock Name:</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Flock_Name, new { @placeholder = "Flock Name", @class = "form-control ", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Flock Breed:</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Flock_Breed, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+    new SelectListItem{ Text="Kenbro", Value = "Kenbro" },
+    new SelectListItem{ Text="Kienyeji", Value = "Kienyeji" },
+     new SelectListItem{ Text="Kuroiler", Value = "Kuroiler" },
+     new SelectListItem{ Text="Leghorn", Value = "Leghorn" },
+    new SelectListItem{ Text="Rhode Island Red", Value = "Rhode Island Red" },
+
+}, new { @class = "form-control ", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Flock Source:</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Flock_Source, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true" })
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+        <label>Total chiken:</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+               @Html.TextBoxFor(model => model.Total_Chiken, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true" })
+
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-4">dhk</div>
+
+    <h3>Flock Details</h3>*@
+  
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+            <label>Chicks:</label>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                </span>
+                <div class="form-line">
+                    @Html.TextBoxFor(model => model.Chicks, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true" })
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label>Hens:</label>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                </span>
+                <div class="form-line">
+                    @Html.TextBoxFor(model => model.Hens, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true" })
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label>Cocks:</label>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                </span>
+                <div class="form-line">
+                    @Html.TextBoxFor(model => model.Cocks, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true" })
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <label>Description:</label>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                </span>
+                <div class="form-line">
+                    @Html.TextBoxFor(model => model.Description, new { @placeholder = "", @class = "form-control ", @autocomplete = "off", Required = "true" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label></label>
+            <div class="input-group">
+
+
+                <input type="submit" class="form-control btn bg-in waves-effect " style="
+    margin-left: 30px; "value=" submit">
+            </div>
+        </div>
+        }
+
+
+
+        <script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var d = new Date();
+                var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+                var n = $("#Acquired_On").val(strDate);
+            })
+
+        </script>
+
+
+

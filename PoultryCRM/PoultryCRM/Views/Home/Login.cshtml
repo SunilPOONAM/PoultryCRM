@@ -1,0 +1,118 @@
+﻿@model PoultryCRM.Models.Registration
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Sign In </title>
+    <!-- Favicon-->
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link href="~/Resources/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="~/Resources/plugins/node-waves/waves.css" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link href="~/Resources/plugins/animate-css/animate.css" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link href="~/Resources/css/style.css" rel="stylesheet">
+    <link href="~/Resources/css/animate.css" rel="stylesheet" />
+</head>
+<body class="login-page">
+    <div class="login-box">
+        <div class="logo">
+            <a href="javascript:void(0);">Sign <b>In</b></a>
+
+        </div>
+        <div class="card">
+            <div class="body">
+                <form action="/Home/Login" method="post">
+                    <div class="msg">Sign in to start your session</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+
+                            @Html.TextBoxFor(model => model.Email, new { @placeholder = "Email Address or Mobile Number", @class = "form-control", @autocomplete = "off", Required = "true" })
+
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            @Html.TextBoxFor(model => model.Password, new { @placeholder = "Password", @class = "form-control", @autocomplete = "off", Required = "true" ,@type="password"})
+                            @*<span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>*@
+                           
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8 p-t-5">
+                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
+                            <label for="rememberme">Remember Me</label>
+                            <span class="password-showhide">
+                                <span class="show-password"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                <span class="hide-password"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                        </div>
+                    </div>
+                    <div class="row m-t-15 m-b--20">
+                        <div class="col-xs-6">
+                            <a href="/Master/Farm_Master">Register Now!</a>
+                        </div>
+                        <div class="col-xs-6 align-right">
+                            <a href="forgot-password.html">Forgot Password?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Jquery Core Js -->
+    <script src="~/Resources/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core Js -->
+    <script src="~/Resources/plugins/bootstrap/js/bootstrap.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="~/Resources/plugins/node-waves/waves.js"></script>
+    <!-- Validation Plugin Js -->
+    <script src="~/Resources/plugins/jquery-validation/jquery.validate.js"></script>
+    <!-- Custom Js -->
+    <script src="~/Resources/js/admin.js"></script>
+    <script src="~/Resources/js/pages/examples/sign-in.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        $(".show-password, .hide-password").on('click', function () {
+            var passwordId = $(this).parents('li:first').find('input').attr('id');
+            if ($(this).hasClass('show-password')) {
+                $("#Password").attr("type", "text");
+                $(this).parent().find(".show-password").hide();
+                $(this).parent().find(".hide-password").show();
+            } else {
+                $("#Password").attr("type", "password");
+                $(this).parent().find(".hide-password").hide();
+                $(this).parent().find(".show-password").show();
+            }
+        });
+        });
+    </script>
+</body>
+</html>

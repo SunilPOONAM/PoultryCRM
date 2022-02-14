@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry</title>
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+
+    <link href="~/Resources/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!-- Waves Effect Css -->
+    <link href="~/Resources/plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="~/Resources/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="~/Resources/plugins/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="~/Resources/css/style.css" rel="stylesheet">
+    <script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+
+    <script src="~/Resources/js/script.js"></script>
+
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="~/Resources/css/themes/all-themes.css" rel="stylesheet" />
+    <style>
+        .slimScrollBar {
+            background: rgba(255, 255, 255, 0.5) !important;
+            width: 6px !important;
+        }
+    </style>
+
+    <style>
+        .bootstrap-select > .dropdown-toggle {
+            display: none !important;
+        }
+
+        .col-md-4 > label {
+            padding-left: 10%;
+        }
+
+        .bg-in {
+            background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="/Master/Index">ADMIN - MATERIAL </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Call Search -->
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- #END# Call Search -->
+                    <!-- Notifications -->
+                    <li>
+
+                    </li>
+                    <li>
+                        <a href="/Home/Logout">
+                            <div id="logoutgf" style="margin-top:25px;display:none;">
+                                <i class="fa fa-sign-out">Logout</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home/Login">
+                            <div id="logingf" style="margin-top:25px;display:none;">
+                                <i class="fa fa-sign-out">Login</i>
+
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar bg-royal">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+
+                    <img src="~/Resources/images/Chicks.jpg" width="60" height="60" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Poultry CRM</div>
+                    <div class="email">poultry.crm@example.com</div>
+                    @*<div class="btn-group user-helper-dropdown">
+                            <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                                <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                                <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                            </ul>
+                        </div>*@
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MAIN NAVIGATION</li>
+                   
+                    @*<li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">Masters</i>
+                            <span>Masters</span>
+                        </a>*@
+                        
+                            <li>
+                                <a href="/Master/Birds" >
+                                    <span>Birds</span>
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="/Master/Chiken_Breed">
+                                    <span>Chiken Breed</span>
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="/Master/Feed_Type" >
+                                    <span>Feed Type</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="/Master/Medication" >
+                                    <span>Medication</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="/Master/Vaccine" >
+                                    <span>Vaccination</span>
+                                </a>
+
+                            </li>
+                       
+                            
+                    
+                    @*</li>*@
+                   
+                    <li class="header">LABELS</li>
+                    <li>
+                        <a href="/Master/Farm_Master">
+                            <i class=" material-icons col-red">
+                                donut_large
+                            </i>
+                            <span>Farm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Master/Issue_Item">
+                            <i class="material-icons col-amber">donut_large</i>
+                            <span>Issue Item</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons col-light-blue">donut_large</i>
+                            <span>Information</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <input type="hidden" value="@Session["UserName"]" id="lblUser" />
+            <div class="new-sidebar-bg new-opt" style="background-image: url('backImg.jpg');"></div>
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="content">
+        @RenderBody()
+
+    </section>
+    <!-- Jquery Core Js -->
+    <script src="~/Resources/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="~/Resources/plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="~/Resources/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="~/Resources/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="~/Resources/plugins/node-waves/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="~/Resources/plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="~/Resources/plugins/raphael/raphael.min.js"></script>
+    <script src="~/Resources/plugins/morrisjs/morris.js"></script>
+
+    <!-- ChartJs -->
+    <script src="plugins/chartjs/Chart.bundle.js"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="~/Resources/plugins/flot-charts/jquery.flot.js"></script>
+    <script src="~/Resources/plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="~/Resources/plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="~/Resources/plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="~/Resources/plugins/flot-charts/jquery.flot.time.js"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="~/Resources/plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Custom Js -->
+    <script src="~/Resources/js/admin.js"></script>
+    <script src="~/Resources/js/pages/index.js"></script>
+
+    <!-- Demo Js -->
+    <script src="~/Resources/js/demo.js"></script>
+
+    <script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // alert(d);
+            var d = $("#lblUser").val();
+            //  alert(d);
+            if (d != "") {
+                $("#logoutgf").css("display", "block");
+                $("#logingf").css("display", "none");
+            }
+            else {
+                $("#logoutgf").css("display", "none");
+                $("#logingf").css("display", "block");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+﻿@using System.Data;
+@using PoultryCRM.Models;
+@model PoultryCRM.Models.Medication_tbl
+@{
+    ViewBag.Title = "Medicin";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Medicine</h2>
+
+@using (Html.BeginForm("Medicin", "Flock_Management", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+
+    <div class="col-md-4">
+        <label>Flock :</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @*@Html.TextBoxFor(model => model.Flock, new { @placeholder = "", @class = "form-control", @autocomplete = "off", Required = "true" })*@
+
+
+                @Html.DropDownListFor(model => model.Flock, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+
+
+}, new { @class = "form-control", Required = "true" })
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Medication Date :</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Medication_Date, new { @placeholder = "", @class = "form-control", @autocomplete = "off", Required = "true" })
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Medicine:</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Medication, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+
+
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Number Of Chicks:</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Chiks, new { @placeholder = "", @class = "form-control", @autocomplete = "off", Required = "true" })
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-3">
+        <label></label>
+        <div class="input-group">
+
+
+            <input type="submit" class="form-control btn bg-in waves-effect " value=" submit">
+        </div>
+    </div>
+}
+
+@*<div id="datatable" style="margin-top:20%;">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                    <thead style="background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;">
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Sr No.</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Flock Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 104px;">Medication</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 104px;">No. of Chiks</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 233px;">Medication Date</th></tr>
+                    </thead>
+                    
+                    <tbody>
+                        @{
+                            DBManager db = new DBManager();
+                            DataTable dttt = db.GetMedicationdata();
+
+                            if (dttt.Rows.Count > 0)
+                            {
+                                int j = 0;
+                                for (int i = 0; dttt.Rows.Count > i; i++)
+                                {
+                                    j++;
+                                    <tr><td>@j</td><td>@dttt.Rows[i]["Flock"]</td><td>@dttt.Rows[i]["Medication"]</td><td>@dttt.Rows[i]["Chiks"]</td><td>@dttt.Rows[i]["Medication_Date"]</td></tr>
+                                }
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>*@
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var d = new Date();
+        var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+        var n = $("#Medication_Date").val(strDate);
+
+              //$.ajax({
+              //    url: "/Flock_Management/GetMedicatione",
+              //    method: "get",
+              //    data: { },
+              //    success: function (result) {
+              //       var n= result.length
+              //        $.each(result, function (i) {
+              //            //var dd=result.text;
+              //            //alert(dd);
+              //           //  $("#Vaccine").append("<option value='" + result[row].value + "'>" + result[row].text + "</option>");
+              //            $("#Medication").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+              //        });
+              //       //for (i = 0; i < n;i++) {
+              //       //    alert(result[i]['text'])
+
+              //       // }
+              //    }
+              //})
+    })
+    var Flockname = $("#FarmName").val();
+   
+    $.ajax({
+        url: "/Flock_Management/GetFlockName",
+        method: "get",
+        data: { "Flockname": Flockname },
+        success: function (result) {
+            var n = result.length
+            $.each(result, function (i) {
+                //var dd=result.text;
+               
+                //  $("#Vaccine").append("<option value='" + result[row].value + "'>" + result[row].text + "</option>");
+                $("#Flock").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+            });
+            //for (i = 0; i < n;i++) {
+            //    alert(result[i]['text'])
+
+            // }
+        }
+    })
+
+    // for vaccine
+    $("#Flock").change(function () {
+        var Item = "Medicin";
+        $.ajax({
+            url: "/Flock_Management/GetFlockDetails",
+            method: "get",
+            data: { "Item": Item },
+            success: function (result) {
+                var n = result.length
+                $('#Medication option').remove();
+                $.each(result, function (i) {
+                   
+                    $("#Medication").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+                });
+                //for (i = 0; i < n;i++) {
+                //    alert(result[i]['text'])
+
+                // }
+            }
+        })
+
+    })
+
+
+
+
+
+</script>
+
+
+
+

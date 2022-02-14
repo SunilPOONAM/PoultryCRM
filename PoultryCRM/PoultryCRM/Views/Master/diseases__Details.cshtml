@@ -1,0 +1,175 @@
+﻿@model PoultryCRM.Models.diseases_tbl
+@{
+    ViewBag.Title = "diseases__Details";
+    Layout = "~/Views/Shared/_LayoutFarms.cshtml";
+}
+
+<h2>Diseases__Details</h2>
+
+@using System.Data;
+@using PoultryCRM.Models;
+
+
+
+
+@*<script src="~/Resources/js/script.js"></script>*@
+
+@using (Html.BeginForm("diseases__Details", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    <div class="col-md-4">
+        <label>Flock</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @*@Html.TextBoxFor(model => model.Flock, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })*@
+                @Html.DropDownListFor(model => model.Flock, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Disease</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @*@Html.TextBoxFor(model => model.diseases, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })*@
+                @Html.DropDownListFor(model => model.diseases, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Symptoms</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.symptoms, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Image</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                <input type="file" id="Image" name="Image" class="form-control" /></div>
+            @*<img src="@(Model.Image).png" />*@
+            @*<input type='file' onchange="readURL(this);" />
+            <img id="blah" src="#" alt="your image" />*@
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Notes</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Notes, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="col-md-3"></div>
+
+    <div class="col-md-3">
+        <label></label>
+        <div class="input-group">
+
+
+            <input type="submit" class="form-control btn bg-in waves-effect " value=" submit">
+        </div>
+    </div>
+}
+<div id="datatable" style="margin-top:20%;">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                    <thead style="background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;">
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Sr No.</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Flock</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Diseases</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Symptoms</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Image</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Notes</th></tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            DBManager db = new DBManager();
+                            DataTable dttt = db.GetDiseases_Details();
+
+                            if (dttt.Rows.Count > 0)
+                            {
+                                int j = 0;
+                                for (int i = 0; dttt.Rows.Count > i; i++)
+                                {
+                                    j++;
+                                    <tr><td>@j</td><td>@dttt.Rows[i]["Flock"]</td><td>@dttt.Rows[i]["diseases"]</td><td>@dttt.Rows[i]["symptoms"]</td><td><img src="~/Images/@dttt.Rows[i]["Image"]" style="height:50px;width:50px;border-radius:50%"></td><td>@dttt.Rows[i]["Notes"]</td></tr>
+                                }
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+   
+    //alert(Flockname);
+    var Flockname = $("#FarmName").val();
+    $.ajax({
+        url: "/Flock_Management/GetFlockName",
+        method: "get",
+        data: { "Flockname": Flockname },
+        success: function (result) {
+            var n = result.length
+            $.each(result, function (i) {
+                $("#Flock").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+            });
+        }
+    })
+    $.ajax({
+        url: "/Master/GetDiseases",
+        method: "get",
+        data: { },
+        success: function (result) {
+            var n = result.length
+            $.each(result, function (i) {
+                $("#diseases").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+            });
+        }
+    })
+</script>
+

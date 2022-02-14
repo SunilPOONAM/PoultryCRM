@@ -1,0 +1,226 @@
+﻿@model PoultryCRM.Models.Daily_Feeding_tbl
+@{
+    ViewBag.Title = "Feeding";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<h3>Daily Feeding</h3>
+
+
+<script src="~/Resources/js/script.js"></script>
+
+@using (Html.BeginForm("Feeding", "Flock_Management", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+
+    <div class="col-md-4">
+        <label>Flock</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Flock, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+
+
+}, new { @class = "form-control", Required = "true" })
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Feeding Date</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+               @Html.TextBoxFor(model => model.feeding_date, new { @placeholder = "Feeding Date ", @class = "form-control", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Type of Bird</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+               @Html.DropDownListFor(model => model.Type_Of_Bird, new List<SelectListItem> { new SelectListItem { Text = "Select", Value = "" }, }, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Feed Used</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Feed_Type, new List<SelectListItem>
+{
+     new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+        <label>Quantity Fed (Kgs)</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Quantity_Fed, new { @placeholder = "Quantity Fed (Kgs) ", @class = "form-control", @autocomplete = "off", Required = "true", onkeypress = "return cn(event)" })
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <label>Comments</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+              
+                @Html.TextAreaFor(model => model.Comment, new { @class = "form-control", @rows = 2, @placeholder = "Comments....... ", @required = "true" })
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-md-3">
+        <label></label>
+        <div class="input-group">
+
+
+            <input type="submit" class="form-control btn bg-in waves-effect " value=" submit">
+        </div>
+    </div>
+}
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script src="~/Resources/js/jquery-ui.js"></script>
+<link href="~/Resources/js/jquery-ui.css" rel="stylesheet" />
+<script type="text/javascript">
+    //$(document).ready(function () {
+        var d = new Date();
+        var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+        var n = $("#feeding_date").val(strDate);
+      
+    //    $.ajax({
+    //        url: "/Flock_Management/GetFeedName",
+    //        method: "get",
+    //        data: {},
+    //        success: function (result) {
+    //            var n = result.length
+    //            $.each(result, function (i) {
+                  
+    //                $("#Feed_Type").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+    //            });
+    //        }
+    //    })
+    //    $.ajax({
+    //        url: "/Flock_Management/GetBirdType",
+    //        method: "get",
+    //        data: {},
+    //        success: function (result) {
+    //            var n = result.length
+    //            $.each(result, function (i) {
+                    
+    //                $("#Type_Of_Bird").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+    //            });
+    //        }
+    //    })
+    //})
+
+    var Flockname = $("#FarmName").val();
+  
+    $.ajax({
+        url: "/Flock_Management/GetFlockName",
+        method: "get",
+        data: { "Flockname": Flockname },
+        success: function (result) {
+            var n = result.length
+            $.each(result, function (i) {
+                //var dd=result.text;
+                //alert(dd);
+                //  $("#Vaccine").append("<option value='" + result[row].value + "'>" + result[row].text + "</option>");
+                $("#Flock").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+            });
+            //for (i = 0; i < n;i++) {
+            //    alert(result[i]['text'])
+
+            // }
+        }
+    })
+
+    // for vaccine
+    $("#Flock").change(function () {
+        var Item = "Bird";
+        $.ajax({
+            url: "/Flock_Management/GetFlockDetails",
+            method: "get",
+            data: { "Item": Item },
+            success: function (result) {
+                var n = result.length
+                $.each(result, function (i) {
+                    //var dd=result.text;
+                    //alert(dd);
+                    //  $("#Vaccine").append("<option value='" + result[row].value + "'>" + result[row].text + "</option>");
+                    $("#Type_Of_Bird").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+                });
+                //for (i = 0; i < n;i++) {
+                //    alert(result[i]['text'])
+
+                // }
+            }
+        })
+        var Item = "Food";
+        $.ajax({
+            url: "/Flock_Management/GetFlockDetails",
+            method: "get",
+            data: { "Item": Item },
+            success: function (result) {
+                var n = result.length
+                $.each(result, function (i) {
+                    
+                    $("#Feed_Type").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+                });
+               
+            }
+        })
+
+    })
+
+    function cn(evt) {
+        evt = (evt) ? evt : window.event;
+        var charcode = (evt.which) ? evt.which : evt.keycode;
+        if (charcode != 46 && charcode > 31 && (charcode < 48 || charcode > 57))
+
+            return false;
+        return true;
+    }
+    //$("#cancel").click(function () {
+    //    var backurl = window.location.href;
+    //   // alert(backurl);
+    //    window.location.href = backurl;
+    //})
+    
+</script>
+
+

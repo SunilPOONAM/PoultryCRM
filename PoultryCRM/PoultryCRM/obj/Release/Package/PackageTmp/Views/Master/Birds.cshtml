@@ -1,0 +1,65 @@
+﻿@model PoultryCRM.Models.Birds_Master
+@{
+    ViewBag.Title = "Birds";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+   .col-md-4 > label {
+        padding-left: 10%;
+    }
+    .col-md-6> label
+    {
+padding-left: 6%;
+    }
+
+    .bg-in {
+        background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+        color: white;
+    }
+    .pd{
+        margin-top:23px;
+    }
+</style>
+<h2>Birds</h2>
+
+
+
+@using (Html.BeginForm("Birds", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <label>Bird Type:</label>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                </span>
+                <div class="form-line">
+                    @Html.TextBoxFor(model => model.Birds_Name, new { @placeholder = "Flock ", @class = "form-control ", @autocomplete = "off", required = "required" })
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+          
+            <div class="input-group pd">
+                <input type="submit" class="form-control btn bg-in waves-effect" value=" submit">
+            </div>
+        </div>
+        }
+
+
+
+        <script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+            })
+
+        </script>
+
+
+

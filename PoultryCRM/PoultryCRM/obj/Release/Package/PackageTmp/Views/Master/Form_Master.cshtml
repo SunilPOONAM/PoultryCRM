@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Form_Master";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Form_Master</h2>
+@model PoultryCRM.Models.Form_Master
+
+
+<script src="~/Resources/js/script.js"></script>
+
+@using (Html.BeginForm("Form_Master", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    <div class="col-md-4">
+        <label>First Name</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Form_Name, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Owner Name</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Owner_Name, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Contact Person</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Contact_person, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Addrees</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Addrees, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Mobile Number</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Mobile, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Email</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Email, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+
+    
+    <br />
+    <br />
+    <div class="col-md-3"></div>
+
+        <div class="col-md-3">
+
+            <div class="input-group">
+
+
+                <input type="submit" class="form-control btn bg-in waves-effect " value=" submit">
+            </div>
+        </div>
+    
+
+
+}
+
+
+
+        <script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var d = new Date();
+                var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+                var n = $("#Acquired_On").val(strDate);
+            })
+
+        </script>
+
+

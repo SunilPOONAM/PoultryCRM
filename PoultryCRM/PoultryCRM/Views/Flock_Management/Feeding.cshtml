@@ -1,0 +1,295 @@
+﻿@using System.Data;
+@using PoultryCRM.Models;
+@model PoultryCRM.Models.Daily_Feeding_tbl
+@{
+    ViewBag.Title = "Feeding";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<h2>Daily Feeding</h2>
+
+@using (Html.BeginForm("Feeding", "Flock_Management", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    <div class="col-md-4"> 
+        <label>Flock</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                
+                @Html.DropDownListFor(model => model.Flock, new List<SelectListItem>
+{
+    new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Feeding Date</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+               @Html.TextBoxFor(model => model.feeding_date, new { @placeholder = "Feeding Date ", @class = "form-control", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Type of Bird</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+               @Html.DropDownListFor(model => model.Type_Of_Bird, new List<SelectListItem> { new SelectListItem { Text = "Select", Value = "" }, }, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Feed Used</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Feed_Type, new List<SelectListItem>
+{
+     new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Quantity Fed (Kgs)</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Quantity_Fed, new { @placeholder = "Quantity Fed (Kgs) ", @class = "form-control", @autocomplete = "off", Required = "true", onkeypress = "return cn(event)" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Comments</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+              
+                @Html.TextAreaFor(model => model.Comment, new { @class = "form-control", @rows = 2, @placeholder = "Comments....... ", @required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <label></label>
+        <div class="input-group">
+
+
+            <input type="submit" class="form-control btn bg-in waves-effect " value=" submit">
+        </div>
+    </div>
+}
+<div id="Details">    
+    <div class="col-md-3">
+        <h4>Total Feed Issue  </h4> <span></span>
+        <input type="text" id="totalbirds" readonly>
+    </div>
+    <div class="col-md-3">
+        <h4>Total Feed Consume</h4> <span></span>
+        <input type="text" id="totalconsumebirds" readonly>
+    </div>
+
+    <div class="col-md-3">
+        <h4>Balance</h4> <span></span>
+        <input type="text" id="Balance" readonly>
+    </div>
+    <div class="col-md-3">
+        <h4>Age of Chiks</h4> <span></span>
+        <input type="text" id="ageofchiks" readonly>
+    </div>
+
+    <div class="col-md-3">
+        <h4>Total Feed Cost</h4>
+        <input type="text" id="FeedCost" readonly>
+    </div>
+
+        <div class="col-md-3">
+            <h4>Food Consume</h4> <span></span>
+            <input type="text" id="foodconsume" readonly>
+        </div>
+    </div>
+@*<div id="datatable" style="margin-top:5%;">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                    <thead style="background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;">
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Sr No.</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Flock</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 233px;">Feeding date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 104px;">Type Of Bird</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 48px;">Feed_Type</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Quantity</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Comment</th></tr>
+                    </thead>
+                   
+                    <tbody>
+                        @{
+                            DBManager db = new DBManager();
+                            DataTable dttt = db.GetFeedingdata();
+
+                            if (dttt.Rows.Count > 0)
+                            {
+                                int j = 0;
+                                for (int i = 0; dttt.Rows.Count > i; i++)
+                                {
+                                    j++;
+                                    <tr><td>@j</td><td>@dttt.Rows[i]["Flock"]</td><td>@dttt.Rows[i]["feeding_date"]</td><td>@dttt.Rows[i]["Type_Of_Bird"]</td><td>@dttt.Rows[i]["Feed_Type"]</td><td>@dttt.Rows[i]["Quantity_Fed"]</td><td>@dttt.Rows[i]["Comment"]</td></tr>
+                                }
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>*@
+
+<script src="~/Resources/js/jquery-ui.js"></script>
+<link href="~/Resources/js/jquery-ui.css" rel="stylesheet" />
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+   
+        var d = new Date();
+        var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+        var n = $("#feeding_date").val(strDate);
+      
+   
+        
+        var Flockname = $("#FarmName").val();
+     
+    $.ajax({
+        url: "/Flock_Management/GetFlockName",
+        method: "get",
+        data: { "Flockname": Flockname },
+        success: function (result) {
+            var n = result.length
+            $.each(result, function (i) {
+                $("#Flock").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+            });
+        }
+    })
+
+     //for vaccine
+    $("#Flock").change(function () {
+        var Item = "Bird";
+        $.ajax({
+            url: "/Flock_Management/GetFlockDetails",
+            method: "get",
+            data: { "Item": Item },
+            success: function (result) {
+                var n = result.length
+                $('#Type_Of_Bird option').remove();
+              
+                $.each(result, function (i) {
+                    $("#Type_Of_Bird").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+                });
+            }
+        })
+        var Item = "Feed";
+        $.ajax({
+            url: "/Flock_Management/GetFlockDetails",
+            method: "get",
+            data: { "Item": Item },
+            success: function (result) {
+                var n = result.length
+                $('#Feed_Type option').remove();
+                $.each(result, function (i) {
+                    $("#Feed_Type").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+                });
+            }
+        })
+        // For Details
+        var Flockname = $("#Flock").val();
+        var Item = "Bird";
+        $.ajax({
+            url: "/Flock_Management/GetIssueBirdss",
+            method: "get",
+            data: { "Flockname": Flockname, "Item": Item },
+            success: function (result) {
+                $("#totalbirds").val(result.Total_Issue);
+                $("#totalconsumebirds").val(result.Total_Consume);
+                $("#Balance").val(result.Balance);
+             var value= ChiksAge(result.agofChiks);
+             $("#ageofchiks").val(value);
+                $("#FeedCost").val(result.Feed_Cost);
+                $("#foodconsume").val(result.Total_Feedconsume_Perchicks);
+            }
+        })
+    })
+    function cn(evt) {
+        evt = (evt) ? evt : window.event;
+        var charcode = (evt.which) ? evt.which : evt.keycode;
+        if (charcode != 46 && charcode > 31 && (charcode < 48 || charcode > 57))
+
+            return false;
+        return true;
+    }
+    function ChiksAge(dateString) {
+       
+        var today = new Date();
+        var DOB = new Date(dateString);
+        var totalMonths = (today.getFullYear() - DOB.getFullYear()) * 12 + today.getMonth() - DOB.getMonth();
+        totalMonths += today.getDay() < DOB.getDay() ? -1 : 0;
+        var years = today.getFullYear() - DOB.getFullYear();
+        if (DOB.getMonth() > today.getMonth())
+            years = years - 1;
+        else if (DOB.getMonth() === today.getMonth())
+            if (DOB.getDate() > today.getDate())
+                years = years - 1;
+        var days;
+        var months;
+        if (DOB.getDate() > today.getDate()) {
+            months = (totalMonths % 12);
+            if (months == 0)
+                months = 11;
+            var x = today.getMonth();
+            switch (x) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12: {
+                    var a = DOB.getDate() - today.getDate();
+                    days = 31 - a;
+                    break;
+                }
+                default: {
+                    var a = DOB.getDate() - today.getDate();
+                    days = 30 - a;
+                    break;
+                }
+            }
+        }
+        else {
+            days = today.getDate() - DOB.getDate();
+            if (DOB.getMonth() === today.getMonth())
+                months = (totalMonths % 12);
+            else
+                months = (totalMonths % 12) + 1;
+        }
+        var age = years + ' years ' + months + ' months ' + days + ' days';
+      
+            return age;
+        }
+
+</script>
+

@@ -1,0 +1,234 @@
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll.config
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\PoultryCRM.pdb
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\EntityFramework.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Owin.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Razor.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\WebGrease.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.Razor.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.pdb
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\EntityFramework.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.dll
+C:\Users\hp\Desktop\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.pdb
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll.config
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\PoultryCRM.pdb
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\EntityFramework.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Web.Infrastructure.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Owin.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Razor.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\WebGrease.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.Razor.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.pdb
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\EntityFramework.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.dll
+D:\Poonam Yadav\TCS Projects\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.pdb
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll.config
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\PoultryCRM.pdb
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\EntityFramework.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Web.Infrastructure.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Owin.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Razor.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\WebGrease.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.Razor.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.pdb
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\EntityFramework.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.csprojResolveAssemblyReference.cache
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.pdb
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\closedXML.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\DocumentFormat.OpenXml.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\ExcelNumberFormat.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\ClosedXML.pdb
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\ClosedXML.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\DocumentFormat.OpenXml.xml
+D:\Poonam Yadav\18-04-21 Poultry\PoultryCRM\PoultryCRM\bin\ExcelNumberFormat.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll.config
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\PoultryCRM.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\PoultryCRM.pdb
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\ClosedXML.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\DocumentFormat.OpenXml.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\EntityFramework.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\ExcelNumberFormat.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.QualityTools.Testing.Fakes.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Web.Infrastructure.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Owin.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Razor.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\WebGrease.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\ClosedXML.pdb
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\ClosedXML.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\DocumentFormat.OpenXml.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\ExcelNumberFormat.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Helpers.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Mvc.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Optimization.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.Razor.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Deployment.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\System.Web.WebPages.Razor.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Antlr3.Runtime.pdb
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Newtonsoft.Json.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\EntityFramework.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\EntityFramework.SqlServer.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Core.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Facebook.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Cookies.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.OAuth.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Google.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.Twitter.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\TCS Project\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.dll
+D:\TCS Project\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.pdb
+D:\TCS Project\PoultryCRM\PoultryCRM\obj\Debug\PoultryCRM.csprojResolveAssemblyReference.cache

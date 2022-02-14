@@ -1,0 +1,56 @@
+﻿@model PoultryCRM.Models.Chiken_Breed_master
+@{
+    ViewBag.Title = "Chiken_Breed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chiken_Breed</h2>
+
+
+@using (Html.BeginForm("Chiken_Breed", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    
+
+
+
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <label>Chiken Breed</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Chiken_Breed, new { @placeholder = "Flock ", @class = "form-control ", @autocomplete = "off", Required = "true" })
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label></label>
+        <div class="input-group pd">
+            <input type="submit" class="form-control btn bg-in waves-effect" value=" submit">
+        </div>
+    </div>
+}
+
+
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    })
+
+</script>
+
+
+

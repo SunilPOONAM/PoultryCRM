@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Poultry_CRMModelStoreContainer" CdmEntityContainer="Poultry_CRMEntities2">
+    <EntitySetMapping Name="Birds_Master">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Birds_Master">
+        <MappingFragment StoreEntitySet="Birds_Master">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Birds_Name" ColumnName="Birds_Name" />
+          <ScalarProperty Name="Birds_ID" ColumnName="Birds_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chiken_Breed_master">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Chiken_Breed_master">
+        <MappingFragment StoreEntitySet="Chiken_Breed_master">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Chiken_Breed" ColumnName="Chiken_Breed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Daily_Feeding_tbl">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Daily_Feeding_tbl">
+        <MappingFragment StoreEntitySet="Daily_Feeding_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Flock" ColumnName="Flock" />
+          <ScalarProperty Name="feeding_date" ColumnName="feeding_date" />
+          <ScalarProperty Name="Type_Of_Bird" ColumnName="Type_Of_Bird" />
+          <ScalarProperty Name="Feed_Type" ColumnName="Feed_Type" />
+          <ScalarProperty Name="Quantity_Fed" ColumnName="Quantity_Fed" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Egg_Collection_tbl">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Egg_Collection_tbl">
+        <MappingFragment StoreEntitySet="Egg_Collection_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Flock" ColumnName="Flock" />
+          <ScalarProperty Name="Collection_Date" ColumnName="Collection_Date" />
+          <ScalarProperty Name="Collected_Eggs" ColumnName="Collected_Eggs" />
+          <ScalarProperty Name="Good_Eggs" ColumnName="Good_Eggs" />
+          <ScalarProperty Name="Spoilt_Eggs" ColumnName="Spoilt_Eggs" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Farm_Master">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Farm_Master">
+        <MappingFragment StoreEntitySet="Farm_Master">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Farm_Name" ColumnName="Farm_Name" />
+          <ScalarProperty Name="Owner_Name" ColumnName="Owner_Name" />
+          <ScalarProperty Name="Contact_person" ColumnName="Contact_person" />
+          <ScalarProperty Name="Addrees" ColumnName="Addrees" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeedType_Master">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.FeedType_Master">
+        <MappingFragment StoreEntitySet="FeedType_Master">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Feed_Type" ColumnName="Feed_Type" />
+          <ScalarProperty Name="Feed_Type_Value" ColumnName="Feed_Type_Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flock_Management_tbl">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Flock_Management_tbl">
+        <MappingFragment StoreEntitySet="Flock_Management_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Acquired_On" ColumnName="Acquired_On" />
+          <ScalarProperty Name="Flock_Name" ColumnName="Flock_Name" />
+          <ScalarProperty Name="Flock_Breed" ColumnName="Flock_Breed" />
+          <ScalarProperty Name="Flock_Source" ColumnName="Flock_Source" />
+          <ScalarProperty Name="Total_Chiken" ColumnName="Total_Chiken" />
+          <ScalarProperty Name="Chicks" ColumnName="Chicks" />
+          <ScalarProperty Name="Hens" ColumnName="Hens" />
+          <ScalarProperty Name="Cocks" ColumnName="Cocks" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Issue_Items_master">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Issue_Items_master">
+        <MappingFragment StoreEntitySet="Issue_Items_master">
+          <ScalarProperty Name="Farm_number" ColumnName="Farm_number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Farm_name" ColumnName="Farm_name" />
+          <ScalarProperty Name="Item_Type" ColumnName="Item_Type" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+          <ScalarProperty Name="Quentity" ColumnName="Quentity" />
+          <ScalarProperty Name="Issue_Date" ColumnName="Issue_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login_Reg_tbl">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Login_Reg_tbl">
+        <MappingFragment StoreEntitySet="Login_Reg_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile_number" ColumnName="Mobile_number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medication_Master">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Medication_Master">
+        <MappingFragment StoreEntitySet="Medication_Master">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Medication" ColumnName="Medication" />
+          <ScalarProperty Name="Medication_value" ColumnName="Medication_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medication_tbl">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Medication_tbl">
+        <MappingFragment StoreEntitySet="Medication_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Flock" ColumnName="Flock" />
+          <ScalarProperty Name="Medication_Date" ColumnName="Medication_Date" />
+          <ScalarProperty Name="Medication" ColumnName="Medication" />
+          <ScalarProperty Name="Chiks" ColumnName="Chiks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vaccination_tbl">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Vaccination_tbl">
+        <MappingFragment StoreEntitySet="Vaccination_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Flock" ColumnName="Flock" />
+          <ScalarProperty Name="Vaccination_Date" ColumnName="Vaccination_Date" />
+          <ScalarProperty Name="Vaccine" ColumnName="Vaccine" />
+          <ScalarProperty Name="Chiks" ColumnName="Chiks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vaccine_Master">
+      <EntityTypeMapping TypeName="Poultry_CRMModel.Vaccine_Master">
+        <MappingFragment StoreEntitySet="Vaccine_Master">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Vaccine" ColumnName="Vaccine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

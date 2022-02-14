@@ -1,0 +1,191 @@
+﻿@using System.Data;
+@using PoultryCRM.Models;
+@{
+    ViewBag.Title = "Form_Master";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Form_Master</h2>
+@model PoultryCRM.Models.Farm_Master
+
+
+<script src="~/Resources/js/script.js"></script>
+
+@using (Html.BeginForm("Farm_Master", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"@*, onsubmit = "return myFunction()"*@ }))
+{
+    <div class="col-md-4">
+        <label>Farm Name</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Farm_Name, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Owner Name</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Owner_Name, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Contact Person</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Contact_person, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Address</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Addrees, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Mobile Number</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Mobile, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Email</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Email, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Password</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Password, new { @placeholder = "", @class = "form-control date", @autocomplete = "off", Required = "true" })
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="col-md-8">
+        <label></label>
+        <div class="input-group">
+
+
+            <input type="submit" class="form-control btn bg-in waves-effect " value=" submit">
+        </div>
+    </div>
+
+
+
+}
+
+<div id="datatable" style="margin-top:20%;">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                    <thead style="background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;">
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Sr No.</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Farm Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 200px;">Owner Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 233px;">Contact Person</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 48px;">Address</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 233px;">Mobile Number</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Create Date</th></tr>
+                    </thead>
+                  
+                    <tbody>
+                        @{
+                            DBManager db = new DBManager();
+                            DataTable dttt = db.GetFarmData();
+
+                            if (dttt.Rows.Count > 0)
+                            {
+                                int j = 0;
+                                for (int i = 0; dttt.Rows.Count > i; i++)
+                                {
+                                    j++;
+                                                    
+                                    <tr><td>@j</td><td>@dttt.Rows[i]["Farm_name"]</td><td>@dttt.Rows[i]["Owner_Name"]</td><td>@dttt.Rows[i]["Contact_person"]</td><td>@dttt.Rows[i]["Addrees"]</td><td>@dttt.Rows[i]["Mobile"]</td><td>@dttt.Rows[i]["Email"]</td><td>@dttt.Rows[i]["date"]</td></tr>
+                                }
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+            $(document).ready(function () {
+                var d = new Date();
+                var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+                var n = $("#Acquired_On").val(strDate);
+            })
+
+
+            $("#Mobile").on("blur", function () {
+                var mobNum = $(this).val();
+                var filter = /^\d*(?:\.\d{1,2})?$/;
+
+                if (filter.test(mobNum)) {
+                    if (mobNum.length == 10) {
+                    }
+                    else if (mobNum.length == 0) {
+                    } else {
+                        alert('Please put 10  digit mobile number');
+                        $("#Mobile").val("");
+                        return false;
+                    }
+                }
+                else {
+                    alert('Not a valid number');
+                    $("#Mobile").val("");
+                    return false;
+                }
+                var name = $("#Owner_Name").val();
+                var password = name + mobNum;
+                $("#Password").val(password);
+            });
+            $("#Owner_Name").on("blur", function () {
+                var name = $("#Owner_Name").val();
+                var mobNum = $("#Mobile").val();
+                var password = name + mobNum;
+                $("#Password").val(password);
+            });
+</script>
+
+
+

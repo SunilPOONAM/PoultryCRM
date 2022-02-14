@@ -1,0 +1,222 @@
+﻿@using System.Data;
+@using PoultryCRM.Models;
+@{
+    ViewBag.Title = "Issue_Item";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Issue_Item</h2>
+
+@model PoultryCRM.Models.Issue_Items_master
+
+@using (Html.BeginForm("Issue_Item", "Master", FormMethod.Post, new
+    {
+        enctype = "multipart/form-data"}))
+{
+
+    <div class="col-md-4">
+        <label>Farm Name</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Farm_name, new List<SelectListItem>
+{
+     new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Item Type</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+               @Html.DropDownListFor(model => model.Item_Type, new List<SelectListItem>
+{
+     new SelectListItem{ Text="Select", Value = "" },
+      new SelectListItem{ Text="Bird", Value = "Bird" },
+       new SelectListItem{ Text="Medicin", Value = "Medicin" },
+        new SelectListItem{ Text="Vaccine", Value = "Vaccine" },
+         new SelectListItem{ Text="Feed", Value = "Feed" },
+}, new { @class = "form-control", Required = "true" })
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Item Name</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Item_Name, new List<SelectListItem>
+{
+     new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Unit</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.DropDownListFor(model => model.Unit, new List<SelectListItem>
+{
+     new SelectListItem{ Text="Select", Value = "" },
+}, new { @class = "form-control", Required = "true" })
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="col-md-4">
+        <label>Quantity</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Quentity, new { @placeholder = "", @class = "form-control", @autocomplete = "off", Required = "true", onkeypress = "return cn(event)" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>Price</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+                @Html.TextBoxFor(model => model.Price, new { @placeholder = "", @class = "form-control", @autocomplete = "off", Required = "true", onkeypress = "return cn(event)" })
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-12">
+        <label></label>
+        <div class="input-group pd">
+            <input type="submit" class="form-control btn bg-in waves-effect" value=" submit">
+        </div>
+    </div>
+}
+<div id="datatable" style="margin-top:20%;">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+    <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                    <thead style="background-image: linear-gradient(to bottom right, #151f31 0%, #1f4a7beb 100%);
+            color: white;">
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Sr No.</th><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 140px;">Farm Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 233px;">Item Type</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 104px;">Item Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 48px;">Quentity</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Issue Date</th></tr>
+                    </thead>
+                   
+                    <tbody>
+                        @{
+                            DBManager db = new DBManager();
+                            DataTable dttt = db.GetIssueMasterData();
+
+                            if (dttt.Rows.Count > 0)
+                            {
+                                int j = 0;
+                                for (int i = 0; dttt.Rows.Count > i; i++)
+                                {
+                                    j++; 
+                                    <tr><td>@j</td><td>@dttt.Rows[i]["Farm_name"]@dttt.Rows[i]["Farm_number"]</td><td>@dttt.Rows[i]["Item_Type"]</td><td>@dttt.Rows[i]["Item_Name"]</td><td>@dttt.Rows[i]["Quentity"]</td><td>@dttt.Rows[i]["Issue_Date"]</td></tr>
+                                }
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/Resources/js/jquery-3.4.1.min.js"></script>
+<script src="~/Resources/js/jquery-ui.js"></script>
+<link href="~/Resources/js/jquery-ui.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        //alert("okk");
+        //var d = new Date();
+        //var strDate = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+        //var n = $("#feeding_date").val(strDate);
+
+        $.ajax({
+            url: "/Master/GetFarmName",
+            method: "get",
+            data: {},
+            success: function (result) {
+                var n = result.length
+                $.each(result, function (i) {
+                  //  alert(result[i]['value']);
+                    $("#Farm_name").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+                });
+
+            }
+        })
+      
+    })
+    function cn(evt) {
+        evt = (evt) ? evt : window.event;
+        var charcode = (evt.which) ? evt.which : evt.keycode;
+        if (charcode != 46 && charcode > 31 && (charcode < 48 || charcode > 57))
+
+            return false;
+        return true;
+    }
+    $("#cancel").click(function () {
+        var backurl = window.location.href;
+        // alert(backurl);
+        window.location.href = backurl;
+    })
+    $("#Item_Type").change(function () {
+        var item = $("#Item_Type").val();
+        $.ajax({
+            url: "/Master/GetItemName",
+            method: "get",
+            data: {"item":item},
+            success: function (result) {
+                $("#Item_Name option").remove();
+                var n = result.length
+                $.each(result, function (i) {
+                  // 
+                    $("#Item_Name").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+                });
+            }
+        })
+    })
+   
+    $.ajax({
+        url: "/Flock_Management/GetUnit",
+        method: "get",
+        data: {},
+        success: function (result) {
+            var n = result.length
+            $.each(result, function (i) {
+                //  alert(result[i]['value']);
+                $("#Unit").append($("<option></option>").val(result[i]['value']).html(result[i]['text']));
+
+            });
+        }
+    })
+</script>
